@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+.servicesSection {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  margin-top: 32px;
+  width: 100%;
+}
+
+.headerGrid {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 48px;
+  font-weight: 600;
+  color: #222;
+  border-bottom: none;
+}
+
+.rowGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 48px;
+  gap: 8px;
+  align-items: center;
+
+}
+
+.inputGhost {
+  background: transparent;
+  border: 1px solid #D2D2D2;
+  border-radius: 3px;
+  padding: 14px 12px;
+  font-size: 1rem;
+  color: #222;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.deleteBtn {
+  background: #111827;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  width: 38px;
+  height: 38px;
+  line-height: 1;      
+  padding: 0;    
+  transition: background 0.2s;
+}
+.deleteBtn:hover {
+  background: #e53935;
+  color: #fff;
+}
+
+.addButtonRow {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.addButton {
+  background: #0069FE;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-self: flex-start;
+}
+
+.addButton:hover {
+  background: #104994;
+}

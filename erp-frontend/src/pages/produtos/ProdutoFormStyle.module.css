@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+/* --- CONTAINER PRINCIPAL --- */
+/* Esse container ocupa a altura disponível e gerencia o scroll */
+.scrollContainer {
+  height: 85vh; /* Força uma altura fixa para o scroll funcionar dentro da tela */
+  overflow-y: auto;
+  padding-right: 8px; /* Espaço leve para não colar */
+
+  /* Esconde a barra de rolagem visualmente */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Esconde barra no Chrome/Safari */
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- WRAPPER DO CONTEÚDO --- */
+.formWrapper {
+  font-family: 'Google Sans', sans-serif;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 120px; /* ESPAÇO EXTRA no final para os botões não sumirem */
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f3f4f6;
+  text-align: left;
+}
+
+/* Subtítulo padrão para seções do formulário */
+.subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 18px;
+  text-align: left;
+  padding-left: 0;
+}
+
+/* --- GRID SYSTEM (LAYOUT) --- */
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+/* Classes de Tamanho das Colunas */
+.col12 { grid-column: span 12; }
+.col9  { grid-column: span 9; }
+.col8  { grid-column: span 8; }
+.col6  { grid-column: span 6; }
+.col4  { grid-column: span 4; }
+.col3  { grid-column: span 3; }
+
+@media (max-width: 768px) {
+  /* No celular, tudo vira uma coluna só */
+  .col12, .col9, .col8, .col6, .col4, .col3 { grid-column: span 12; }
+}
+
+/* --- CAMPOS (INPUTS) --- */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #6b7280;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+/* Estilo unificado para inputs */
+.input, .select, .textarea {
+  display: block; /* Garante que o input se comporte corretamente */
+  width: 100%;
+  height: 48px;
+  padding: 0 16px; /* Padding interno padrão */
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1f2937;
+  transition: border-color 0.2s;
+  box-sizing: border-box; /* Garante que padding não aumente a largura */
+}
+
+.textarea {
+  height: auto;
+  min-height: 120px;
+  padding: 12px 16px;
+  resize: vertical;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+}
+
+/* --- CHECKBOX CUSTOMIZADO --- */
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px; /* Mesma altura dos inputs para alinhar */
+  margin-top: 20px; /* Compensa a altura do label dos outros campos */
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #000;
+}
+
+.checkboxLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* --- PREVIEW DA IMAGEM --- */
+.imagePreviewBox {
+  margin-top: 8px;
+  width: 100%;
+  min-height: 200px;
+  border: 2px dashed #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.previewImg {
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* --- RODAPÉ DE BOTÕES --- */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.btn {
+  height: 48px;
+  padding: 0 32px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.salvarBtn {
+  background-color: #000000;
+  border-radius: 3px;
+  color: #ffffff;
+  border: none;
+}
+
+.salvarBtn:hover { opacity: 0.9; }
+
+.cancelarBtn {
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+  color: #374151;
+}
+
+.cancelarBtn:hover { background-color: #f9fafb; }

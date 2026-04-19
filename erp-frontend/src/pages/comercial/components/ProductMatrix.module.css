@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number][min="0"] {
+  color-scheme: only light;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+  width: 100%;
+}
+
+/* Tabela matriz */
+.body {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Espaço entre as linhas de produtos */
+}
+
+/* --- GRID DEFINITION  --- */
+.header, .row {
+  display: grid;
+  /* Colunas: 
+     1. Cód (80px)
+     2. Produto (Elastic 1fr - ocupa o resto)
+     3. Preço (100px - NOVO!)
+     4. Grade x 6 (48px cada)
+     5. Qtd (60px)
+     6. Total (110px)
+     7. Delete (40px)
+  */
+  grid-template-columns: 76px 1fr 100px repeat(6, 48px) 60px 110px 40px;
+  column-gap: 8px; /* Espacinho entre colunas para não grudar */
+  align-items: center;
+  padding: 0 4px;
+}
+
+.header {
+  color: #555;
+  font-weight: 700;
+  font-size: 0.85rem; /* Fonte um pouco menor no header para elegância */
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.row {
+  min-height: 44px;
+}
+
+/* --- COLUNAS --- */
+.colAuto { text-align: left; }
+.colSize { text-align: center; }
+.colMedium { text-align: center; }
+.colSmall { text-align: left; }
+.colAction { display: flex; justify-content: center; }
+
+/* Inputs integrados */
+.inputGhost {
+  width: 100%;
+  background-color: #F8F9FA; /* Fundo um pouco mais claro */
+  border: 1px solid #ddd;
+  border-radius: 4px; /* Cantos levemente arredondados */
+  color: #333;
+  font-weight: 500;
+  padding: 8px 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  height: 38px; /* Altura fixa para alinhar tudo */
+}
+
+/* Destaque ao focar */
+.inputGhost:focus {
+  outline: none;
+  border-color: #0069FE;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px rgba(0, 105, 254, 0.1);
+}
+
+.textCenter { text-align: center; }
+.textRight { text-align: right; }
+/* Botão de ação (lixeira) */
+
+.deleteBtn {
+  background: #0F172A;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.deleteBtn:hover {
+  background: #e53935;
+  color: #fff;
+}
+
+/* Botão adicionar */
+ .addButton {
+  margin-top: 18px;
+  background: #0069FE;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-flex;
+  align-self: flex-start;
+  gap: 8px;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+}

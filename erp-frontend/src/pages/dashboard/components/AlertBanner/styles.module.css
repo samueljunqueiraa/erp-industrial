@@ -1,0 +1,65 @@
+/* AlertBanner Styles */
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #C7DEFF;
+	color: #075985;
+	padding: 18px 24px;
+	border-radius: 5px;
+	font-size: 1rem;
+	box-sizing: border-box;
+	width: 100%;
+}
+.left {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.iconEyeBg {
+	background: #84B7FF;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.text {
+	color: #075985;
+	font-weight: 500;
+}
+.right {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+.button {
+	background: #0F172A;
+	color: #fff;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	font-weight: 500;
+	cursor: pointer;
+	font-size: 0.85rem;
+	transition: background 0.2s;
+}
+.button:hover {
+	background: #1e293b;
+}
+.closeBtn {
+	background: transparent;
+	border: none;
+	color: #075985;
+	cursor: pointer;
+	padding: 4px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.2s;
+}
+.closeBtn:hover {
+	background: #e0f2fe;
+}

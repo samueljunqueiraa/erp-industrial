@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+/* O Wrapper agora é transparente, apenas segura o layout */
+.pageWrapper {
+  margin-top: 32px;
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  max-width: 100%;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- 1. CABEÇALHO (Título e Botão) --- */
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.novoBtn {
+  background: #0F172A;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.novoBtn:hover {
+  background: #0069FE;
+}
+
+/* --- 2. BARRA DE BUSCA (Fundo Cinza Isolado) --- */
+.filterBar {
+  width: 96%;
+  background: #F3F3F3; /* O cinza fica só aqui agora */
+  border: none; /* Removemos borda para ficar clean igual ao design */
+  border-radius: 6px;
+  padding: 18px 24px;
+  font-size: 1rem;
+  margin-bottom: 28px;
+  color: #222;
+  outline: none;
+}
+
+.filterBar::placeholder {
+  color: #666;
+}
+
+/* --- 3. TABELA (Fundo Branco Isolado) --- */
+.tableCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra suave */
+  overflow: hidden; /* Para arredondar os cantos da tabela */
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse; /* Collapse tira os espaços entre células */
+}
+
+/* Cabeçalho Azul Claro */
+.thead {
+  background: #D0E1FD; 
+}
+
+.th {
+  padding: 16px 24px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.td {
+  padding: 16px 24px;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Linhas zebradas suaves */
+.tbody tr:nth-child(even) {
+  background: #F8FAFC;
+}
+.tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* BOTOES DE AÇÃO */
+.actionBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.verBtn, .editarBtn, .excluirBtn {
+  border: none;
+  border-radius: 3px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+}
+
+.verBtn { 
+    background: #0069FE; 
+    transition: background 0.2s ease;
+}
+.verBtn:hover {
+    background: #0054CC; 
+}
+
+.editarBtn { 
+    background: #0F172A; 
+    transition: background 0.2s ease;
+}
+.editarBtn:hover {
+    background: #1E293B;
+}
+
+.excluirBtn { 
+    background: #F20000; 
+    transition: background 0.2s ease;
+}
+.excluirBtn:hover {
+    background: #C40000;
+}
+
+.loading, .noData {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  background: #fff;
+  border-radius: 8px;
+}

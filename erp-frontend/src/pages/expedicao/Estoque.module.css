@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+/* ERP Theme Variables */
+:root {
+  --bg-body: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --border-color: #EEEEEE;
+  --active-bg: #E6F0FF;
+  --active-text: #0069FE;
+  --bg-surface: #F5F5F5;
+
+  font-family: 'Google Sans', 'Google Sans Flex', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  --bg-body: #0F172A;
+  --text-primary: #EDEDED;
+  --text-secondary: #A1A1AA;
+  --border-color: #27272a;
+  --active-bg: #1E3A8A;
+  --active-text: #60a5fa;
+  --bg-surface: #1E293B;
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+}
+
+body, .container, .title, .subtitle, .tableCard, .table, .btnNew, .emptyState {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif !important;
+  color: var(--text-primary);
+}
+
+.container {
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Google Sans', 'Google Sans Flex', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--text-primary); 
+  background-color: var(--bg-body);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.btnAtualizar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 14px;
+  background-color: #0069FE;
+  border-radius: 4px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent; 
+}
+
+.btnAtualizar:hover {
+  background-color: var(--active-bg);
+  border-color: var(--active-text);
+  color: var(--active-text);
+}
+
+.btnAtualizar:active {
+  transform: scale(0.98);
+}
+
+/* --- TABELA --- */
+.tableContainer {
+  background: var(--bg-surface);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  overflow: hidden; 
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.thead {
+  background-color: var(--bg-surface);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.th {
+  padding: 1rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s;
+}
+
+.tr:last-child {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background-color: var(--active-bg);
+}
+
+.td {
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+/* --- ESTILOS ESPECÍFICOS DAS COLUNAS --- */
+.sku {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  background-color: var(--bg-surface);
+  padding: 4px 8px;
+  border-radius: 2px;
+  color: var(--text-secondary); 
+}
+
+.produto {
+  font-weight: 600;
+  color: var(--text-primary); 
+}
+
+.ordemTag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #e0f2fe;
+  color: #0369a1;            
+}
+
+body.dark .ordemTag {
+  background-color: #0c4a6e;
+  color: #bae6fd;
+}
+
+.progressoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.barraProgresso {
+  width: 80px;
+  height: 6px;
+  background-color: var(--border-color);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.barraPreenchida {
+  height: 100%;
+  background-color: #3b82f6; 
+}
+
+.completo {
+  background-color: #1cb855;
+}
+
+.saldo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #166534; 
+  display: flex;
+  justify-content: flex-end;
+}
+
+body.dark .saldo {
+  color: #43ec81; 
+}
+
+.loading, .empty {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-secondary); 
+  font-style: italic;
+}

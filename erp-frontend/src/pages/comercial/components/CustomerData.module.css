@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+.customerDataContainer {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  margin-top: 10px;
+}
+
+.searchBlock {
+  margin-bottom: 18px;
+}
+
+.representanteTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.searchInputWrapper {
+  display: flex;
+  align-items: center;
+  background: #C7DEFF;
+  border-radius: 4px;
+  padding: 10px 12px;
+  width: 320px;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  flex: 1;
+  outline: none;
+  color: #000000;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 150px 1fr 150px 1fr;
+  gap: 12px 24px;
+  margin-bottom: 32px;
+}
+
+.label {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  align-self: start;
+  text-align: left;
+}
+
+.infoInput {
+  border: 1px solid #D2D2D2;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #222;
+}
+
+.freteBlock {
+  border-radius: 10px;
+ 
+}
+
+.linhaEntregaRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.padraoBtn {
+  background: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.padraoBtn:active, .padraoBtn.active {
+  background: #000;
+}
+
+.editarBtn {
+  background: #0069FE;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.freteBlock {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.freteHeader {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.freteFormGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+  margin-bottom: 18px;
+}
+
+.freteInput {
+  background: transparent;
+  border: 1px solid #D2D2D2;
+  border-radius: 3px;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #222;
+}
+
+.freteFooter {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+
+.tipoFreteSelect {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px; 
+}
+
+.tipoFreteSelect:hover {
+  background-color: #000000;
+}
+
+.tipoFreteSelect:focus {
+  outline: 2px solid #0069FE;
+  outline-offset: 2px;
+}
+

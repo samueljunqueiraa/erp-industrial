@@ -1,0 +1,63 @@
+/* --- FUNDO DA PÁGINA --- */
+.scrollWrapper {
+  height: 100vh;
+  overflow-y: auto; 
+  box-sizing: border-box;
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent; 
+}
+
+.scrollWrapper::-webkit-scrollbar { width: 8px; height: 8px; }
+.scrollWrapper::-webkit-scrollbar-track { background: transparent; }
+.scrollWrapper::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 4px; border: 3px solid #F3F4F6; }
+.scrollWrapper::-webkit-scrollbar-thumb:hover { background-color: #94a3b8; }
+
+
+/* --- GRID PRINCIPAL --- */
+.dashboardGrid {
+  display: grid;
+  grid-template-areas:
+    "banner banner banner"
+    "kpi monthly sidebar";
+  grid-template-columns: 330px 380px 330px; 
+  grid-template-rows: auto auto; 
+  gap: 32px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto; 
+  height: auto; 
+  padding: 32px;
+  padding-bottom: 160px;
+  box-sizing: border-box;
+}
+
+/* 1. Banner */
+.bannerArea {
+  grid-area: banner;
+  display: flex;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+/* 2. KPI */
+.kpiBoardArea {
+  grid-area: kpi;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 3. Monthly */
+.MonthlySalesCard {
+  grid-area: monthly;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* 4. Sidebar */
+.sidebarContent {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

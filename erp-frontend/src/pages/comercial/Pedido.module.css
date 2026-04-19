@@ -1,0 +1,67 @@
+/* Título principal do pedido */
+.pedidoTitle {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #000;
+  margin-bottom: 32px;
+  text-align: left;
+  padding-left: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+.sectionTitle {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #222;
+  text-align: left;
+}
+/* Botão de finalizar pedido (usado no Pedido.tsx) */
+.finalizarPedidoBtn {
+  color: #fff;
+  background-color: #0F172A;
+  border: none;
+  border-radius: 4px;
+  padding: 14px 36px;
+  margin-bottom: 60px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.2s;
+}
+.finalizarPedidoBtn:hover {
+  background: #000000;
+}
+.pedidoPageWrapper {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  border-radius: 5px;
+  
+  max-height: 85vh;
+  min-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* estilos para a barra de rolagem personalizada */
+.pedidoPageWrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.pedidoPageWrapper::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 2px;
+}
+
+.pedidoPageWrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.pedidoPageWrapper::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+

@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+/* ERP Theme Variables */
+:root {
+  /* ERP Theme Variables - Light Mode */
+  --bg-body: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --border-color: #EEEEEE;
+  --active-bg: #E6F0FF;
+  --active-text: #0069FE;
+  --bg-surface: #F5F5F5;
+
+  font-family: 'Google Sans', 'Google Sans Flex', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  --bg-body: #0F172A;
+  --text-primary: #EDEDED;
+  --text-secondary: #A1A1AA;
+  --border-color: #27272a;
+  --active-bg: #1E3A8A;
+  --active-text: #60a5fa;
+  --bg-surface: #1E293B;
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+}
+
+body, .container, .title, .subtitle, .tableCard, .table, .btnNew, .emptyState {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif !important;
+  color: var(--text-primary);
+}
+
+.cardVazio {
+  background: var(--bg-body); /* Adaptável */
+  border: 2px dashed var(--border-color); /* Adaptável */
+  border-radius: 12px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary); /* Adaptável */
+  text-align: center;
+  height: 100%;
+  min-height: 250px;
+}
+
+.iconPulse {
+  color: var(--border-color); /* Adaptável */
+  margin-bottom: 1rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.5; transform: scale(0.95); }
+}
+
+/* --- CARD DE ERRO --- */
+/* Mantém cores semânticas, mas ajustamos no dark mode lá embaixo */
+.cardErro {
+  background: #fef2f2; 
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #991b1b;
+  text-align: center;
+  height: 100%;
+  min-height: 250px;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* --- CARD DE SUCESSO --- */
+.cardSucesso {
+  background: var(--bg-body); /* Adaptável */
+  border: 1px solid var(--border-color); /* Adaptável */
+  border-left: 6px solid #22c55e; /* Verde fixo (semântico) */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  min-height: 250px;
+}
+
+.headerCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.badge {
+  background-color: #dcfce7; /* Ajustado no dark mode */
+  color: #166534;           /* Ajustado no dark mode */
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.labelTopo {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary); /* Adaptável */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.produtoNome {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-primary); /* Adaptável */
+  line-height: 1.2;
+}
+
+.sku {
+  color: var(--text-secondary); /* Adaptável */
+  font-family: monospace;
+  font-size: 1rem;
+  background: var(--bg-surface); /* Adaptável */
+  padding: 2px 6px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.gridInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: auto; 
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color); /* Adaptável */
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--text-secondary); /* Adaptável */
+}
+
+.valor {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary); /* Adaptável */
+}
+
+.valorDestaque {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--active-text); /* Azul do tema */
+}
+
+

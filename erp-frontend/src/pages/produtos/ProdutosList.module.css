@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+/* --- VARIÁVEIS DE TEMA (ROOT) --- */
+:root {
+  --bg-body: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --border-color: #EEEEEE;
+  --active-bg: #E6F0FF;
+  --active-text: #0069FE;
+  --bg-surface: #F5F5F5;
+  font-family: 'Google Sans', 'Google Sans Flex', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  --bg-body: #0F172A;
+  --text-primary: #EDEDED;
+  --text-secondary: #A1A1AA;
+  --border-color: #27272a;
+  --active-bg: #1E3A8A;
+  --active-text: #60a5fa;
+  --bg-surface: #1E293B;
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-body);
+}
+
+body, .container, .title, .subtitle, .tableCard, .table, .btnNew, .emptyState {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif !important;
+  color: var(--text-primary);
+}
+
+/* --- ESTILOS DA PÁGINA COM VARIÁVEIS APLICADAS --- */
+.pageWrapper {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  padding: 24px 24px;
+  min-height: 100vh;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-primary); 
+  margin: 0;
+}
+
+.novoBtn {
+  font-family: 'Google Sans', 'Google Sans Flex', Arial, sans-serif;
+  background-color: var(--text-primary); 
+  color: var(--bg-body);
+  border: none;
+  border-radius: 3px;
+  padding: 12px 14px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.novoBtn:hover {
+  opacity: 0.9;
+}
+
+.tableCard {
+  background: var(--bg-surface); 
+  border-radius: 5px;
+  overflow: hidden; 
+  border: 1px solid var(--border-color); 
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.thead {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.th {
+  padding: 14px 24px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.tbody tr {
+  border-bottom: 1px solid var(--border-color); 
+  transition: background-color 0.15s;
+}
+
+.tbody tr:last-child {
+  border-bottom: none;
+}
+
+.tbody tr:hover {
+  background-color: var(--active-bg);
+}
+
+.td {
+  padding: 16px 24px;
+  font-size: 14px;
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+
+.statusBadge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ativo {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.inativo {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 8px;
+}
+
+.editarBtn, .excluirBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editarBtn {
+  color: #ffffff;
+  background-color: var(--active-text); 
+}
+
+.editarBtn:hover {
+  opacity: 0.8;
+}
+
+.excluirBtn {
+  color: #ffffff;
+  background-color: #F20000;
+}
+
+.excluirBtn:hover {
+  background-color: #ef3131;
+  border: none;
+}
+
+.loading, .noData {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
